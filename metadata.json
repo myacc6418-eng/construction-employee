@@ -1,0 +1,6 @@
+{
+  "name": "BuildFlow Workforce",
+  "description": "Mobile-first employee and construction labour companion for selfie attendance, live GPS tracking, work assignments, wages, leave, advances, and material purchases.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

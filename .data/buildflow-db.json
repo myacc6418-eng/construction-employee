@@ -1,0 +1,1417 @@
+{
+  "sites": [
+    {
+      "id": "site-hyd-tower-a",
+      "organizationId": "org-buildflow-demo",
+      "projectId": "proj-hyd-tower",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteName": "Tower A",
+      "address": "Plot 42, HITEC Financial District, Hyderabad, Telangana",
+      "city": "Hyderabad",
+      "latitude": 17.4239,
+      "longitude": 78.3732,
+      "geofenceRadiusMeters": 250,
+      "geofenceEnabled": true,
+      "allowGeofenceException": true,
+      "shiftName": "Morning Site Shift",
+      "shiftStart": "08:00 AM",
+      "shiftEnd": "05:30 PM",
+      "breakMinutes": 60
+    },
+    {
+      "id": "site-hyd-substation",
+      "organizationId": "org-buildflow-demo",
+      "projectId": "proj-hyd-tower",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteName": "Utility Block & Substation",
+      "address": "East Wing Gate 2, HITEC Financial District, Hyderabad",
+      "city": "Hyderabad",
+      "latitude": 17.4252,
+      "longitude": 78.3749,
+      "geofenceRadiusMeters": 200,
+      "geofenceEnabled": true,
+      "allowGeofenceException": true,
+      "shiftName": "Morning Site Shift",
+      "shiftStart": "08:00 AM",
+      "shiftEnd": "05:30 PM",
+      "breakMinutes": 60
+    },
+    {
+      "id": "site-blr-block-b",
+      "organizationId": "org-buildflow-demo",
+      "projectId": "proj-blr-res",
+      "projectName": "Bengaluru Residential Complex",
+      "siteName": "Block B",
+      "address": "Survey 118, Whitefield Main Rd, Bengaluru, Karnataka",
+      "city": "Bengaluru",
+      "latitude": 12.9716,
+      "longitude": 77.7499,
+      "geofenceRadiusMeters": 250,
+      "geofenceEnabled": true,
+      "allowGeofenceException": true,
+      "shiftName": "Day Finishing Shift",
+      "shiftStart": "08:30 AM",
+      "shiftEnd": "06:00 PM",
+      "breakMinutes": 60
+    }
+  ],
+  "employees": [
+    {
+      "id": "emp-rahul-1001",
+      "organizationId": "org-buildflow-demo",
+      "organizationName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "employeeCode": "BF-EMP-1001",
+      "fullName": "Rahul Kumar",
+      "phone": "+91 98490 11223",
+      "email": "rahul.kumar@buildflow-demo.in",
+      "avatarUrl": "/src/assets/images/avatar_rahul_electrician_1794997998901.jpg",
+      "designation": "Site Electrician",
+      "department": "MEP & Electrical",
+      "employmentCategory": "Permanent Employee",
+      "payModel": "monthly_salaried",
+      "joiningDate": "2024-03-15",
+      "primaryProjectId": "proj-hyd-tower",
+      "primaryProjectName": "Hyderabad Commercial Tower",
+      "primarySiteId": "site-hyd-tower-a",
+      "primarySiteName": "Tower A",
+      "authorizedSiteIds": [
+        "site-hyd-tower-a",
+        "site-hyd-substation"
+      ],
+      "reportingSupervisorName": "Vikram Reddy (MEP Supervisor)",
+      "reportingSupervisorPhone": "+91 98490 99001",
+      "emergencyContactName": "Sunita Devi",
+      "emergencyContactPhone": "+91 98490 55441",
+      "emergencyContactRelation": "Spouse",
+      "aadhaarMasked": "XXXX-XXXX-4829",
+      "bankAccountMasked": "HDFC •••• 3910",
+      "leaveEligible": true,
+      "advanceEligible": true,
+      "purchaseEligible": true,
+      "isSampleData": true
+    },
+    {
+      "id": "emp-ramesh-2001",
+      "organizationId": "org-buildflow-demo",
+      "organizationName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "employeeCode": "BF-LAB-2001",
+      "fullName": "Ramesh",
+      "phone": "+91 99081 22445",
+      "email": "ramesh.mason@buildflow-demo.in",
+      "avatarUrl": "/src/assets/images/avatar_ramesh_mason_1794997999658.jpg",
+      "designation": "Mason",
+      "department": "Civil & Masonry",
+      "employmentCategory": "Daily-Wage Labourer",
+      "payModel": "daily_wage",
+      "joiningDate": "2025-08-01",
+      "primaryProjectId": "proj-hyd-tower",
+      "primaryProjectName": "Hyderabad Commercial Tower",
+      "primarySiteId": "site-hyd-tower-a",
+      "primarySiteName": "Tower A",
+      "authorizedSiteIds": [
+        "site-hyd-tower-a"
+      ],
+      "reportingSupervisorName": "Prakash Rao (Civil Foreman)",
+      "reportingSupervisorPhone": "+91 98490 99002",
+      "emergencyContactName": "Lakshmi",
+      "emergencyContactPhone": "+91 99081 66778",
+      "emergencyContactRelation": "Wife",
+      "aadhaarMasked": "XXXX-XXXX-7314",
+      "bankAccountMasked": "SBI •••• 8821",
+      "leaveEligible": false,
+      "advanceEligible": true,
+      "purchaseEligible": true,
+      "isSampleData": true
+    },
+    {
+      "id": "emp-suresh-2002",
+      "organizationId": "org-buildflow-demo",
+      "organizationName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "employeeCode": "BF-LAB-2002",
+      "fullName": "Suresh",
+      "phone": "+91 97012 33669",
+      "email": "suresh.steel@buildflow-demo.in",
+      "avatarUrl": "/src/assets/images/avatar_suresh_steelfixer_1794997999900.jpg",
+      "designation": "Steel Fixer",
+      "department": "Structural & Bar Bending",
+      "employmentCategory": "Skilled Labourer",
+      "payModel": "daily_wage",
+      "joiningDate": "2025-06-12",
+      "primaryProjectId": "proj-hyd-tower",
+      "primaryProjectName": "Hyderabad Commercial Tower",
+      "primarySiteId": "site-hyd-tower-a",
+      "primarySiteName": "Tower A",
+      "authorizedSiteIds": [
+        "site-hyd-tower-a"
+      ],
+      "reportingSupervisorName": "Prakash Rao (Civil Foreman)",
+      "reportingSupervisorPhone": "+91 98490 99002",
+      "emergencyContactName": "Narasimha",
+      "emergencyContactPhone": "+91 97012 88110",
+      "emergencyContactRelation": "Brother",
+      "aadhaarMasked": "XXXX-XXXX-6192",
+      "bankAccountMasked": "Union Bank •••• 5012",
+      "leaveEligible": false,
+      "advanceEligible": true,
+      "purchaseEligible": false,
+      "isSampleData": true
+    },
+    {
+      "id": "emp-mahesh-2003",
+      "organizationId": "org-buildflow-demo",
+      "organizationName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "employeeCode": "BF-LAB-2003",
+      "fullName": "Mahesh",
+      "phone": "+91 96112 77889",
+      "email": "mahesh.tile@buildflow-demo.in",
+      "avatarUrl": "/src/assets/images/avatar_mahesh_tileworker_1794998000182.jpg",
+      "designation": "Tile Worker",
+      "department": "Interior Finishing",
+      "employmentCategory": "Piece-Rate Worker",
+      "payModel": "piece_rate",
+      "joiningDate": "2025-11-04",
+      "primaryProjectId": "proj-blr-res",
+      "primaryProjectName": "Bengaluru Residential Complex",
+      "primarySiteId": "site-blr-block-b",
+      "primarySiteName": "Block B",
+      "authorizedSiteIds": [
+        "site-blr-block-b"
+      ],
+      "reportingSupervisorName": "Anand Gowda (Finishing Engineer)",
+      "reportingSupervisorPhone": "+91 98450 99003",
+      "emergencyContactName": "Kavitha",
+      "emergencyContactPhone": "+91 96112 44002",
+      "emergencyContactRelation": "Sister",
+      "aadhaarMasked": "XXXX-XXXX-2905",
+      "bankAccountMasked": "Canara •••• 1490",
+      "leaveEligible": false,
+      "advanceEligible": true,
+      "purchaseEligible": true,
+      "isSampleData": true
+    }
+  ],
+  "credentials": {
+    "BF-EMP-1001": {
+      "pin": "1234"
+    },
+    "BF-LAB-2001": {
+      "pin": "1234"
+    },
+    "BF-LAB-2002": {
+      "pin": "1234"
+    },
+    "BF-LAB-2003": {
+      "pin": "1234"
+    }
+  },
+  "sessions": {
+    "885868d25cf38610c4120cdfa3de89754febbc99beb2e07b": {
+      "employeeId": "emp-rahul-1001",
+      "createdAt": "2026-11-18T10:41:43.434Z"
+    }
+  },
+  "attendanceSessions": [
+    {
+      "id": "att-rahul-prev-1",
+      "referenceId": "ATT-20261117-1001",
+      "organizationId": "org-buildflow-demo",
+      "employeeId": "emp-rahul-1001",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "projectName": "Hyderabad Commercial Tower",
+      "shiftDate": "2026-11-17",
+      "shiftName": "Morning Site Shift",
+      "status": "completed",
+      "approvalStatus": "Approved",
+      "checkInTime": "2026-11-17T08:02:00.000Z",
+      "checkInSelfieDataUrl": "/src/assets/images/avatar_rahul_electrician_1794997998901.jpg",
+      "checkInLat": 17.42392,
+      "checkInLng": 78.37321,
+      "checkInAccuracyMeters": 14,
+      "checkInGeofence": {
+        "withinGeofence": true,
+        "distanceMeters": 12,
+        "allowedRadiusMeters": 250,
+        "geofenceEnabled": true,
+        "accuracyMeters": 14,
+        "statusLabel": "Verified Inside Site"
+      },
+      "checkOutTime": "2026-11-17T17:38:00.000Z",
+      "checkOutSelfieDataUrl": "/src/assets/images/avatar_rahul_electrician_1794997998901.jpg",
+      "checkOutLat": 17.42388,
+      "checkOutLng": 78.37319,
+      "checkOutAccuracyMeters": 16,
+      "checkOutGeofence": {
+        "withinGeofence": true,
+        "distanceMeters": 15,
+        "allowedRadiusMeters": 250,
+        "geofenceEnabled": true,
+        "accuracyMeters": 16,
+        "statusLabel": "Verified Inside Site"
+      },
+      "totalDurationMinutes": 576,
+      "payableMinutes": 516,
+      "breakMinutesApplied": 60,
+      "trackingActive": false,
+      "lastLocationUpdateAt": "2026-11-17T17:35:00.000Z",
+      "idempotencyKey": "seed-rahul-prev-1"
+    },
+    {
+      "id": "att-ramesh-prev-1",
+      "referenceId": "ATT-20261117-2001",
+      "organizationId": "org-buildflow-demo",
+      "employeeId": "emp-ramesh-2001",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "projectName": "Hyderabad Commercial Tower",
+      "shiftDate": "2026-11-17",
+      "shiftName": "Morning Site Shift",
+      "status": "completed",
+      "approvalStatus": "Approved",
+      "checkInTime": "2026-11-17T07:56:00.000Z",
+      "checkInSelfieDataUrl": "/src/assets/images/avatar_ramesh_mason_1794997999658.jpg",
+      "checkInLat": 17.42391,
+      "checkInLng": 78.37318,
+      "checkInAccuracyMeters": 18,
+      "checkInGeofence": {
+        "withinGeofence": true,
+        "distanceMeters": 18,
+        "allowedRadiusMeters": 250,
+        "geofenceEnabled": true,
+        "accuracyMeters": 18,
+        "statusLabel": "Verified Inside Site"
+      },
+      "checkOutTime": "2026-11-17T17:34:00.000Z",
+      "totalDurationMinutes": 578,
+      "payableMinutes": 518,
+      "breakMinutesApplied": 60,
+      "trackingActive": false,
+      "idempotencyKey": "seed-ramesh-prev-1"
+    },
+    {
+      "id": "att-suresh-unresolved",
+      "referenceId": "ATT-20261117-2002",
+      "organizationId": "org-buildflow-demo",
+      "employeeId": "emp-suresh-2002",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "projectName": "Hyderabad Commercial Tower",
+      "shiftDate": "2026-11-17",
+      "shiftName": "Morning Site Shift",
+      "status": "unresolved",
+      "approvalStatus": "Exception Pending",
+      "checkInTime": "2026-11-17T08:04:00.000Z",
+      "checkInSelfieDataUrl": "/src/assets/images/avatar_suresh_steelfixer_1794997999900.jpg",
+      "checkInLat": 17.42395,
+      "checkInLng": 78.37324,
+      "checkInAccuracyMeters": 19,
+      "checkInGeofence": {
+        "withinGeofence": true,
+        "distanceMeters": 21,
+        "allowedRadiusMeters": 250,
+        "geofenceEnabled": true,
+        "accuracyMeters": 19,
+        "statusLabel": "Verified Inside Site"
+      },
+      "trackingActive": false,
+      "lastLocationUpdateAt": "2026-11-17T16:45:00.000Z",
+      "idempotencyKey": "seed-suresh-unresolved"
+    },
+    {
+      "id": "att-mahesh-prev-1",
+      "referenceId": "ATT-20261116-2003",
+      "organizationId": "org-buildflow-demo",
+      "employeeId": "emp-mahesh-2003",
+      "siteId": "site-blr-block-b",
+      "siteName": "Block B",
+      "projectName": "Bengaluru Residential Complex",
+      "shiftDate": "2026-11-16",
+      "shiftName": "Day Finishing Shift",
+      "status": "completed",
+      "approvalStatus": "Approved",
+      "checkInTime": "2026-11-16T08:27:00.000Z",
+      "checkInSelfieDataUrl": "/src/assets/images/avatar_mahesh_tileworker_1794998000182.jpg",
+      "checkInLat": 12.97162,
+      "checkInLng": 77.74988,
+      "checkInAccuracyMeters": 15,
+      "checkInGeofence": {
+        "withinGeofence": true,
+        "distanceMeters": 11,
+        "allowedRadiusMeters": 250,
+        "geofenceEnabled": true,
+        "accuracyMeters": 15,
+        "statusLabel": "Verified Inside Site"
+      },
+      "checkOutTime": "2026-11-16T18:05:00.000Z",
+      "totalDurationMinutes": 578,
+      "payableMinutes": 518,
+      "breakMinutesApplied": 60,
+      "trackingActive": false,
+      "idempotencyKey": "seed-mahesh-prev-1"
+    }
+  ],
+  "attendanceExceptions": [],
+  "locationLogs": [],
+  "workAssignments": [
+    {
+      "id": "work-rahul-1",
+      "taskCode": "WRK-1042",
+      "employeeId": "emp-rahul-1001",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "locationFloor": "Floor 4 · East Wing Conduit Corridor",
+      "title": "Main Distribution Board & PVC Conduit Routing",
+      "description": "Pull 4 sq mm FRLS copper wiring and terminate DB-4E sub-distribution panel per approved single-line schematic.",
+      "instructions": [
+        "Verify conduit saddle spacing at max 600mm intervals.",
+        "Colour-code R/Y/B phases with heat-shrink sleeves before termination.",
+        "Lock-out/tag-out main riser breaker before starting busbar connection."
+      ],
+      "safetyInstructions": [
+        "Insulated gloves (1000V rated) and safety shoes mandatory.",
+        "Test circuit dead with calibrated multimeter before touching conductors."
+      ],
+      "requiredEquipment": [
+        "Insulated Plier Set",
+        "Digital Multimeter",
+        "Cable Crimper",
+        "Safety Harness (ladder work)"
+      ],
+      "supervisorName": "Vikram Reddy",
+      "supervisorPhone": "+91 98490 99001",
+      "priority": "High",
+      "startDate": "2026-11-17",
+      "dueDate": "2026-11-18",
+      "measurable": true,
+      "expectedQuantity": 120,
+      "completedQuantity": 75,
+      "approvedQuantity": 60,
+      "unit": "meters",
+      "status": "In Progress",
+      "drawingTitle": "MEP-EL-FL4-R2.pdf (Floor 4 Conduit Layout)",
+      "updates": [
+        {
+          "id": "upd-r-1",
+          "workId": "work-rahul-1",
+          "employeeId": "emp-rahul-1001",
+          "updateType": "progress",
+          "completedQuantity": 75,
+          "notes": "Completed East corridor conduit laying and wire pulling up to Room 406.",
+          "photoDataUrls": [],
+          "createdAt": "2026-11-17T16:20:00.000Z",
+          "idempotencyKey": "seed-upd-r-1"
+        }
+      ]
+    },
+    {
+      "id": "work-rahul-2",
+      "taskCode": "WRK-1049",
+      "employeeId": "emp-rahul-1001",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteId": "site-hyd-substation",
+      "siteName": "Utility Block & Substation",
+      "locationFloor": "Ground Level · Panel Room B",
+      "title": "Earthing Pit Continuity & Resistance Check",
+      "description": "Inspect 4 chemical earthing pits and record earth-resistance readings with supervisor sign-off.",
+      "instructions": [
+        "Clean copper earth busbar terminals.",
+        "Record 3-point fall-of-potential meter reading for each pit."
+      ],
+      "safetyInstructions": [
+        "Wear rubber-soled dielectric boots and safety helmet."
+      ],
+      "requiredEquipment": [
+        "Earth Resistance Tester",
+        "Wire Brush",
+        "Spanner Kit"
+      ],
+      "supervisorName": "Vikram Reddy",
+      "supervisorPhone": "+91 98490 99001",
+      "priority": "Normal",
+      "startDate": "2026-11-18",
+      "dueDate": "2026-11-19",
+      "measurable": false,
+      "status": "Assigned",
+      "updates": []
+    },
+    {
+      "id": "work-ramesh-1",
+      "taskCode": "WRK-2011",
+      "employeeId": "emp-ramesh-2001",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "locationFloor": "Floor 3 · North Partition Wall",
+      "title": "Brickwork Masonry — 230mm External Wall",
+      "description": "Construct 230mm clay brick masonry wall along Grid C4–C8 using 1:5 cement mortar with plumb check every 4 courses.",
+      "instructions": [
+        "Soak bricks thoroughly in curing tank for at least 2 hours before laying.",
+        "Maintain uniform 10mm mortar joint thickness.",
+        "Check vertical plumb and line-dori alignment after every 4 courses."
+      ],
+      "safetyInstructions": [
+        "Hard hat, dust mask, and rubber mason gloves mandatory.",
+        "Ensure scaffold guardrails are locked before working above 1.8m."
+      ],
+      "requiredEquipment": [
+        "Trowel",
+        "Plumb Bob",
+        "Spirit Level",
+        "Line Dori"
+      ],
+      "supervisorName": "Prakash Rao",
+      "supervisorPhone": "+91 98490 99002",
+      "priority": "Urgent",
+      "startDate": "2026-11-17",
+      "dueDate": "2026-11-18",
+      "measurable": true,
+      "expectedQuantity": 200,
+      "completedQuantity": 85,
+      "approvedQuantity": 85,
+      "unit": "sq ft",
+      "status": "In Progress",
+      "referencePhotoUrl": "/src/assets/images/work_site_brickwork_1794997999852.jpg",
+      "drawingTitle": "ARCH-FL3-MAS-01.pdf",
+      "updates": [
+        {
+          "id": "upd-ram-1",
+          "workId": "work-ramesh-1",
+          "employeeId": "emp-ramesh-2001",
+          "updateType": "progress",
+          "completedQuantity": 85,
+          "notes": "85 sq ft brickwork finished up to sill level; supervisor Prakash verified plumb.",
+          "photoDataUrls": [
+            "/src/assets/images/work_site_brickwork_1794997999852.jpg"
+          ],
+          "createdAt": "2026-11-17T17:00:00.000Z",
+          "idempotencyKey": "seed-upd-ram-1"
+        }
+      ]
+    },
+    {
+      "id": "work-ramesh-2",
+      "taskCode": "WRK-2004",
+      "employeeId": "emp-ramesh-2001",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "locationFloor": "Floor 2 · Shaft B",
+      "title": "Plastering & Curing — Service Shaft",
+      "description": "12mm internal cement plastering on service shaft inner wall.",
+      "instructions": [
+        "Apply neat cement slurry coat before base plaster."
+      ],
+      "safetyInstructions": [
+        "Wear safety goggles during overhead mortar application."
+      ],
+      "requiredEquipment": [
+        "Wooden Float",
+        "Straight Edge"
+      ],
+      "supervisorName": "Prakash Rao",
+      "supervisorPhone": "+91 98490 99002",
+      "priority": "Normal",
+      "startDate": "2026-11-14",
+      "dueDate": "2026-11-16",
+      "measurable": true,
+      "expectedQuantity": 150,
+      "completedQuantity": 150,
+      "approvedQuantity": 150,
+      "unit": "sq ft",
+      "status": "Completed",
+      "updates": []
+    },
+    {
+      "id": "work-suresh-1",
+      "taskCode": "WRK-2088",
+      "employeeId": "emp-suresh-2002",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "locationFloor": "Floor 6 · Core Column Grid B3–B6",
+      "title": "Column Rebar Tying & Stirrup Placement",
+      "description": "Assemble and tie 16mm Fe550D main bars with 8mm helical stirrups at 150mm c/c spacing per structural BBS.",
+      "instructions": [
+        "Use 40mm concrete cover blocks on all four faces.",
+        "Stagger lap splices as marked in BBS sheet."
+      ],
+      "safetyInstructions": [
+        "Full-body harness with double lanyard required near slab edge.",
+        "Leather gloves and safety glasses mandatory."
+      ],
+      "requiredEquipment": [
+        "Binding Wire Hook",
+        "Bar Bending Lever",
+        "Measuring Tape"
+      ],
+      "supervisorName": "Prakash Rao",
+      "supervisorPhone": "+91 98490 99002",
+      "priority": "High",
+      "startDate": "2026-11-17",
+      "dueDate": "2026-11-18",
+      "measurable": true,
+      "expectedQuantity": 1200,
+      "completedQuantity": 820,
+      "approvedQuantity": 600,
+      "unit": "kg",
+      "status": "In Progress",
+      "drawingTitle": "STR-COL-BBS-FL6.pdf",
+      "updates": []
+    },
+    {
+      "id": "work-mahesh-1",
+      "taskCode": "WRK-3015",
+      "employeeId": "emp-mahesh-2003",
+      "projectName": "Bengaluru Residential Complex",
+      "siteId": "site-blr-block-b",
+      "siteName": "Block B",
+      "locationFloor": "Flat 304 & 305 · Living & Kitchen",
+      "title": "Vitrified Floor Tile Laying (600x600mm)",
+      "description": "Lay 600x600mm double-charge vitrified floor tiles with 2mm epoxy spacers over leveled screed bed.",
+      "instructions": [
+        "Check zero-level alignment from main entrance threshold.",
+        "Tap lightly with rubber mallet to eliminate hollow pockets.",
+        "Clean spacer joints before adhesive cures."
+      ],
+      "safetyInstructions": [
+        "Use knee pads, dust mask during tile cutting, and safety goggles."
+      ],
+      "requiredEquipment": [
+        "Tile Cutter",
+        "Notched Trowel",
+        "Rubber Mallet",
+        "2mm Tile Spacers"
+      ],
+      "supervisorName": "Anand Gowda",
+      "supervisorPhone": "+91 98450 99003",
+      "priority": "High",
+      "startDate": "2026-11-16",
+      "dueDate": "2026-11-19",
+      "measurable": true,
+      "expectedQuantity": 420,
+      "completedQuantity": 260,
+      "approvedQuantity": 220,
+      "unit": "sq ft",
+      "pieceRatePerUnit": 45,
+      "status": "In Progress",
+      "drawingTitle": "INT-TILE-B304.pdf",
+      "updates": [
+        {
+          "id": "upd-mah-1",
+          "workId": "work-mahesh-1",
+          "employeeId": "emp-mahesh-2003",
+          "updateType": "progress",
+          "completedQuantity": 260,
+          "notes": "Flat 304 living room finished (220 sq ft approved by Anand). Flat 305 kitchen started (40 sq ft pending check).",
+          "photoDataUrls": [],
+          "createdAt": "2026-11-16T17:45:00.000Z",
+          "idempotencyKey": "seed-upd-mah-1"
+        }
+      ]
+    },
+    {
+      "id": "work-mahesh-2",
+      "taskCode": "WRK-3002",
+      "employeeId": "emp-mahesh-2003",
+      "projectName": "Bengaluru Residential Complex",
+      "siteId": "site-blr-block-b",
+      "siteName": "Block B",
+      "locationFloor": "Flat 202 · Master Bathroom",
+      "title": "Ceramic Wall Dado Tiling",
+      "description": "Install 300x450mm bathroom wall tiles up to lintel height (2100mm).",
+      "instructions": [
+        "Maintain plumb and slope towards floor trap."
+      ],
+      "safetyInstructions": [
+        "Safety glasses required during grinder bevel cuts."
+      ],
+      "requiredEquipment": [
+        "Laser Level",
+        "Tile Cutter"
+      ],
+      "supervisorName": "Anand Gowda",
+      "supervisorPhone": "+91 98450 99003",
+      "priority": "Normal",
+      "startDate": "2026-11-10",
+      "dueDate": "2026-11-14",
+      "measurable": true,
+      "expectedQuantity": 180,
+      "completedQuantity": 180,
+      "approvedQuantity": 180,
+      "unit": "sq ft",
+      "pieceRatePerUnit": 45,
+      "status": "Completed",
+      "updates": []
+    }
+  ],
+  "salaryProfiles": [
+    {
+      "employeeId": "emp-rahul-1001",
+      "payModel": "monthly_salaried",
+      "monthlyGross": 24000,
+      "allowances": 2500,
+      "nextPayday": "2026-12-01",
+      "currency": "INR",
+      "isSampleData": true
+    },
+    {
+      "employeeId": "emp-ramesh-2001",
+      "payModel": "daily_wage",
+      "dailyWageRate": 800,
+      "nextPayday": "2026-11-23",
+      "currency": "INR",
+      "isSampleData": true
+    },
+    {
+      "employeeId": "emp-suresh-2002",
+      "payModel": "daily_wage",
+      "dailyWageRate": 900,
+      "nextPayday": "2026-11-23",
+      "currency": "INR",
+      "isSampleData": true
+    },
+    {
+      "employeeId": "emp-mahesh-2003",
+      "payModel": "piece_rate",
+      "pieceRateUnit": "sq ft",
+      "pieceRatePerUnit": 45,
+      "nextPayday": "2026-11-25",
+      "currency": "INR",
+      "isSampleData": true
+    }
+  ],
+  "payslips": [
+    {
+      "id": "slip-rahul-oct",
+      "employeeId": "emp-rahul-1001",
+      "companyName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "payrollPeriod": "October 2026",
+      "periodStart": "2026-10-01",
+      "periodEnd": "2026-10-31",
+      "attendanceDays": 26,
+      "approvedOvertimeHours": 6,
+      "grossEarnings": 24000,
+      "allowances": 2500,
+      "overtimePay": 900,
+      "totalDeductions": 2300,
+      "statutoryDeductions": 1800,
+      "netPay": 25100,
+      "paymentStatus": "Paid",
+      "paymentDate": "2026-11-01",
+      "paymentReference": "NEFT-HDFC-99482011",
+      "lineItems": [
+        {
+          "label": "Basic & Fixed Monthly Pay",
+          "amount": 24000,
+          "type": "earning"
+        },
+        {
+          "label": "Site & Conveyance Allowance",
+          "amount": 2500,
+          "type": "earning"
+        },
+        {
+          "label": "Approved Overtime (6 hrs)",
+          "amount": 900,
+          "type": "earning"
+        },
+        {
+          "label": "EPF & Professional Tax (Statutory)",
+          "amount": 1800,
+          "type": "deduction"
+        },
+        {
+          "label": "Advance Installment #2",
+          "amount": 500,
+          "type": "deduction"
+        }
+      ],
+      "isSampleData": true
+    },
+    {
+      "id": "slip-rahul-nov-curr",
+      "employeeId": "emp-rahul-1001",
+      "companyName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "payrollPeriod": "November 2026 (Provisional)",
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "attendanceDays": 14,
+      "approvedOvertimeHours": 4,
+      "grossEarnings": 24000,
+      "allowances": 2500,
+      "overtimePay": 600,
+      "totalDeductions": 2300,
+      "statutoryDeductions": 1800,
+      "netPay": 24800,
+      "paymentStatus": "Processing",
+      "lineItems": [
+        {
+          "label": "Monthly Gross Salary",
+          "amount": 24000,
+          "type": "earning"
+        },
+        {
+          "label": "Site & Conveyance Allowance",
+          "amount": 2500,
+          "type": "earning"
+        },
+        {
+          "label": "Approved Overtime (4 hrs)",
+          "amount": 600,
+          "type": "earning"
+        },
+        {
+          "label": "EPF & Professional Tax",
+          "amount": 1800,
+          "type": "deduction"
+        },
+        {
+          "label": "Scheduled Advance Deduction",
+          "amount": 500,
+          "type": "deduction"
+        }
+      ],
+      "isSampleData": true
+    },
+    {
+      "id": "slip-ramesh-oct",
+      "employeeId": "emp-ramesh-2001",
+      "companyName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "payrollPeriod": "October 2026 (24 Days)",
+      "periodStart": "2026-10-01",
+      "periodEnd": "2026-10-31",
+      "attendanceDays": 24,
+      "approvedOvertimeHours": 5,
+      "grossEarnings": 19200,
+      "allowances": 500,
+      "overtimePay": 500,
+      "totalDeductions": 300,
+      "statutoryDeductions": 0,
+      "netPay": 19900,
+      "paymentStatus": "Paid",
+      "paymentDate": "2026-11-02",
+      "paymentReference": "IMPS-SBI-77401928",
+      "lineItems": [
+        {
+          "label": "Daily Wage (24 approved days × ₹800)",
+          "amount": 19200,
+          "type": "earning"
+        },
+        {
+          "label": "Approved Overtime (5 hrs)",
+          "amount": 500,
+          "type": "earning"
+        },
+        {
+          "label": "Tool Kit Allowance",
+          "amount": 500,
+          "type": "earning"
+        },
+        {
+          "label": "Authorized Canteen Deduction",
+          "amount": 300,
+          "type": "deduction"
+        }
+      ],
+      "isSampleData": true
+    },
+    {
+      "id": "slip-ramesh-nov-curr",
+      "employeeId": "emp-ramesh-2001",
+      "companyName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "payrollPeriod": "November 2026 (Cycle To-Date)",
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-18",
+      "attendanceDays": 13,
+      "approvedOvertimeHours": 2,
+      "grossEarnings": 10400,
+      "allowances": 0,
+      "overtimePay": 200,
+      "totalDeductions": 500,
+      "statutoryDeductions": 0,
+      "netPay": 10100,
+      "paymentStatus": "Processing",
+      "lineItems": [
+        {
+          "label": "Daily Wage (13 approved days × ₹800)",
+          "amount": 10400,
+          "type": "earning"
+        },
+        {
+          "label": "Approved Overtime (2 hrs)",
+          "amount": 200,
+          "type": "earning"
+        },
+        {
+          "label": "Advance Recovery Installment",
+          "amount": 500,
+          "type": "deduction"
+        }
+      ],
+      "isSampleData": true
+    },
+    {
+      "id": "slip-suresh-oct",
+      "employeeId": "emp-suresh-2002",
+      "companyName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "payrollPeriod": "October 2026 (25 Days)",
+      "periodStart": "2026-10-01",
+      "periodEnd": "2026-10-31",
+      "attendanceDays": 25,
+      "approvedOvertimeHours": 4,
+      "grossEarnings": 22500,
+      "allowances": 400,
+      "overtimePay": 450,
+      "totalDeductions": 0,
+      "statutoryDeductions": 0,
+      "netPay": 23350,
+      "paymentStatus": "Paid",
+      "paymentDate": "2026-11-02",
+      "paymentReference": "UPI-UBI-66201944",
+      "lineItems": [
+        {
+          "label": "Daily Wage (25 approved days × ₹900)",
+          "amount": 22500,
+          "type": "earning"
+        },
+        {
+          "label": "Approved Overtime (4 hrs)",
+          "amount": 450,
+          "type": "earning"
+        },
+        {
+          "label": "Height Work Bonus",
+          "amount": 400,
+          "type": "earning"
+        }
+      ],
+      "isSampleData": true
+    },
+    {
+      "id": "slip-mahesh-nov-curr",
+      "employeeId": "emp-mahesh-2003",
+      "companyName": "BuildFlow Infra Projects Pvt. Ltd.",
+      "payrollPeriod": "Nov 1 – Nov 18, 2026 (Piece-Rate)",
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-18",
+      "attendanceDays": 14,
+      "approvedOvertimeHours": 0,
+      "approvedQuantity": 400,
+      "grossEarnings": 18000,
+      "allowances": 0,
+      "overtimePay": 0,
+      "totalDeductions": 0,
+      "statutoryDeductions": 0,
+      "netPay": 18000,
+      "paymentStatus": "Processing",
+      "lineItems": [
+        {
+          "label": "Approved Tile Work (400 sq ft × ₹45/sq ft)",
+          "amount": 18000,
+          "type": "earning"
+        }
+      ],
+      "isSampleData": true
+    }
+  ],
+  "paymentTransactions": [
+    {
+      "id": "pay-1",
+      "employeeId": "emp-rahul-1001",
+      "payslipId": "slip-rahul-oct",
+      "periodLabel": "October 2026 Salary",
+      "paymentDate": "2026-11-01",
+      "amount": 25100,
+      "paymentMethod": "Bank Transfer (NEFT/IMPS)",
+      "transactionReference": "NEFT-HDFC-99482011",
+      "status": "Paid",
+      "isSampleData": true
+    },
+    {
+      "id": "pay-2",
+      "employeeId": "emp-ramesh-2001",
+      "payslipId": "slip-ramesh-oct",
+      "periodLabel": "October 2026 Wages",
+      "paymentDate": "2026-11-02",
+      "amount": 19900,
+      "paymentMethod": "Bank Transfer (NEFT/IMPS)",
+      "transactionReference": "IMPS-SBI-77401928",
+      "status": "Paid",
+      "isSampleData": true
+    },
+    {
+      "id": "pay-3",
+      "employeeId": "emp-suresh-2002",
+      "payslipId": "slip-suresh-oct",
+      "periodLabel": "October 2026 Wages",
+      "paymentDate": "2026-11-02",
+      "amount": 23350,
+      "paymentMethod": "UPI",
+      "transactionReference": "UPI-UBI-66201944",
+      "status": "Paid",
+      "isSampleData": true
+    },
+    {
+      "id": "pay-4",
+      "employeeId": "emp-mahesh-2003",
+      "payslipId": "slip-mahesh-nov-curr",
+      "periodLabel": "Nov Piece-Rate Cycle (Pending Finance Sign-off)",
+      "paymentDate": "2026-11-25",
+      "amount": 18000,
+      "paymentMethod": "Bank Transfer (NEFT/IMPS)",
+      "transactionReference": "PENDING-FINANCE-881",
+      "status": "Processing",
+      "isSampleData": true
+    }
+  ],
+  "leaveBalances": {
+    "emp-rahul-1001": [
+      {
+        "leaveTypeId": "cl",
+        "leaveTypeName": "Casual Leave",
+        "allocated": 8,
+        "used": 2,
+        "pending": 0,
+        "available": 6
+      },
+      {
+        "leaveTypeId": "sl",
+        "leaveTypeName": "Sick Leave",
+        "allocated": 6,
+        "used": 1,
+        "pending": 0,
+        "available": 5
+      },
+      {
+        "leaveTypeId": "el",
+        "leaveTypeName": "Earned Leave",
+        "allocated": 12,
+        "used": 3,
+        "pending": 0,
+        "available": 9
+      },
+      {
+        "leaveTypeId": "ul",
+        "leaveTypeName": "Unpaid Leave",
+        "allocated": 30,
+        "used": 0,
+        "pending": 0,
+        "available": 30
+      }
+    ]
+  },
+  "leaveRequests": [
+    {
+      "id": "lv-rahul-1",
+      "employeeId": "emp-rahul-1001",
+      "leaveTypeId": "cl",
+      "leaveTypeName": "Casual Leave",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-19",
+      "durationType": "Full Day",
+      "workingDaysCount": 2,
+      "reason": "Family function in hometown",
+      "contactDuringLeave": "+91 98490 11223",
+      "status": "Approved",
+      "submittedAt": "2026-10-12T09:30:00.000Z",
+      "reviewerName": "Vikram Reddy",
+      "reviewerRemarks": "Approved. Shift covered by standby electrician.",
+      "idempotencyKey": "seed-lv-rahul-1"
+    }
+  ],
+  "advanceRequests": [
+    {
+      "id": "adv-rahul-1",
+      "employeeId": "emp-rahul-1001",
+      "requestType": "Salary Advance",
+      "requestedAmount": 2000,
+      "approvedAmount": 2000,
+      "reason": "Medical checkup expenses for parent",
+      "repaymentMonths": 4,
+      "status": "Partially Repaid",
+      "submittedAt": "2026-09-05T10:15:00.000Z",
+      "repaidAmount": 1000,
+      "remainingBalance": 1000,
+      "reviewerRemarks": "Approved by HR & Finance. ₹500/month recovery.",
+      "repaymentSchedule": [
+        {
+          "id": "rep-1",
+          "installmentNumber": 1,
+          "dueDate": "2026-10-01",
+          "payrollPeriod": "Sep 2026",
+          "amount": 500,
+          "status": "Deducted"
+        },
+        {
+          "id": "rep-2",
+          "installmentNumber": 2,
+          "dueDate": "2026-11-01",
+          "payrollPeriod": "Oct 2026",
+          "amount": 500,
+          "status": "Deducted"
+        },
+        {
+          "id": "rep-3",
+          "installmentNumber": 3,
+          "dueDate": "2026-12-01",
+          "payrollPeriod": "Nov 2026",
+          "amount": 500,
+          "status": "Scheduled"
+        },
+        {
+          "id": "rep-4",
+          "installmentNumber": 4,
+          "dueDate": "2027-01-01",
+          "payrollPeriod": "Dec 2026",
+          "amount": 500,
+          "status": "Scheduled"
+        }
+      ],
+      "idempotencyKey": "seed-adv-rahul-1"
+    },
+    {
+      "id": "adv-ramesh-1",
+      "employeeId": "emp-ramesh-2001",
+      "requestType": "Wage Advance",
+      "requestedAmount": 1500,
+      "approvedAmount": 1500,
+      "reason": "School fees payment",
+      "repaymentMonths": 3,
+      "status": "Partially Repaid",
+      "submittedAt": "2026-10-20T11:00:00.000Z",
+      "repaidAmount": 500,
+      "remainingBalance": 1000,
+      "reviewerRemarks": "Approved by Site Manager.",
+      "repaymentSchedule": [
+        {
+          "id": "rep-r1",
+          "installmentNumber": 1,
+          "dueDate": "2026-11-02",
+          "payrollPeriod": "Oct 2026",
+          "amount": 500,
+          "status": "Deducted"
+        },
+        {
+          "id": "rep-r2",
+          "installmentNumber": 2,
+          "dueDate": "2026-11-23",
+          "payrollPeriod": "Nov Cycle",
+          "amount": 500,
+          "status": "Scheduled"
+        },
+        {
+          "id": "rep-r3",
+          "installmentNumber": 3,
+          "dueDate": "2026-12-07",
+          "payrollPeriod": "Dec Cycle",
+          "amount": 500,
+          "status": "Scheduled"
+        }
+      ],
+      "idempotencyKey": "seed-adv-ramesh-1"
+    }
+  ],
+  "purchaseRequests": [
+    {
+      "id": "pr-rahul-1",
+      "requestCode": "PR-2026-412",
+      "employeeId": "emp-rahul-1001",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "materialCategory": "Electrical",
+      "materialName": "25mm Heavy Gauge FRLS PVC Conduit (3m pipes)",
+      "requiredQuantity": 40,
+      "unit": "nos",
+      "estimatedUnitPrice": 145,
+      "estimatedTotal": 5800,
+      "priority": "High",
+      "requiredDeliveryDate": "2026-11-20",
+      "reason": "Needed for Floor 5 East Wing slab conduit drop",
+      "workTaskCode": "WRK-1042",
+      "status": "Under Procurement Review",
+      "submittedAt": "2026-11-17T11:20:00.000Z",
+      "idempotencyKey": "seed-pr-rahul-1"
+    }
+  ],
+  "purchaseExpenses": [
+    {
+      "id": "pe-rahul-1",
+      "expenseReference": "EXP-2026-809",
+      "employeeId": "emp-rahul-1001",
+      "supplierName": "Sri Sai Electrical & Hardware Mart",
+      "supplierContact": "+91 98480 44321",
+      "purchaseDate": "2026-11-17",
+      "projectName": "Hyderabad Commercial Tower",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "items": [
+        {
+          "id": "item-1",
+          "materialCategory": "Electrical Consumables",
+          "materialName": "3M PVC Insulation Tape (Pack of 10)",
+          "quantity": 4,
+          "unit": "packs",
+          "unitPrice": 220,
+          "lineTotal": 880
+        },
+        {
+          "id": "item-2",
+          "materialCategory": "Hardware",
+          "materialName": "25mm GI Saddle Clamps (Box of 100)",
+          "quantity": 2,
+          "unit": "boxes",
+          "unitPrice": 310,
+          "lineTotal": 620
+        }
+      ],
+      "subtotal": 1500,
+      "gstPercent": 18,
+      "taxAmount": 270,
+      "totalAmount": 1770,
+      "paymentMethod": "UPI",
+      "paidBy": "Employee Personal Funds",
+      "reason": "Urgent consumables for Floor 4 DB termination",
+      "invoiceNumber": "INV-SSE-4418",
+      "supplierGstin": "36AABCS1429B1Z5",
+      "billPhotoDataUrls": [],
+      "materialPhotoDataUrls": [],
+      "gpsLat": 17.4239,
+      "gpsLng": 78.3732,
+      "capturedAt": "2026-11-17T14:10:00.000Z",
+      "submittedAt": "2026-11-17T14:15:00.000Z",
+      "remarks": "Handed over box to Tower A site store.",
+      "workTaskCode": "WRK-1042",
+      "status": "Reimbursement Pending",
+      "receiptStatus": "Material Received",
+      "receiptVerifiedBy": "Kiran (Site Storekeeper)",
+      "receiptVerifiedAt": "2026-11-17T15:00:00.000Z",
+      "idempotencyKey": "seed-pe-rahul-1"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-1",
+      "employeeId": "emp-rahul-1001",
+      "category": "Employee ID",
+      "title": "BuildFlow Digital Site ID Card",
+      "documentNumber": "BF-EMP-1001",
+      "status": "Verified",
+      "issuedDate": "2024-03-15",
+      "downloadAllowed": true
+    },
+    {
+      "id": "doc-2",
+      "employeeId": "emp-rahul-1001",
+      "category": "Appointment Letter",
+      "title": "Signed Employment Appointment Letter",
+      "status": "Verified",
+      "issuedDate": "2024-03-15",
+      "downloadAllowed": true
+    },
+    {
+      "id": "doc-3",
+      "employeeId": "emp-rahul-1001",
+      "category": "Safety Certificates",
+      "title": "Electrical LOTO & Height Safety Induction",
+      "status": "Verified",
+      "issuedDate": "2026-01-10",
+      "expiryDate": "2027-01-09",
+      "downloadAllowed": true
+    },
+    {
+      "id": "doc-4",
+      "employeeId": "emp-rahul-1001",
+      "category": "Identity Documents",
+      "title": "Aadhaar KYC Verification Copy (Masked)",
+      "status": "Requested",
+      "downloadAllowed": false
+    },
+    {
+      "id": "doc-ramesh-1",
+      "employeeId": "emp-ramesh-2001",
+      "category": "Employee ID",
+      "title": "Site Gate Pass — Tower A",
+      "documentNumber": "BF-LAB-2001",
+      "status": "Verified",
+      "issuedDate": "2025-08-01",
+      "downloadAllowed": true
+    },
+    {
+      "id": "doc-ramesh-2",
+      "employeeId": "emp-ramesh-2001",
+      "category": "Safety Certificates",
+      "title": "Scaffolding & Masonry PPE Induction",
+      "status": "Verified",
+      "issuedDate": "2026-06-01",
+      "downloadAllowed": true
+    },
+    {
+      "id": "doc-suresh-1",
+      "employeeId": "emp-suresh-2002",
+      "category": "Employee ID",
+      "title": "Site Gate Pass — Tower A",
+      "documentNumber": "BF-LAB-2002",
+      "status": "Verified",
+      "issuedDate": "2025-06-12",
+      "downloadAllowed": true
+    },
+    {
+      "id": "doc-mahesh-1",
+      "employeeId": "emp-mahesh-2003",
+      "category": "Employee ID",
+      "title": "Site Gate Pass — Block B",
+      "documentNumber": "BF-LAB-2003",
+      "status": "Verified",
+      "issuedDate": "2025-11-04",
+      "downloadAllowed": true
+    }
+  ],
+  "safetyNotices": [
+    {
+      "id": "saf-1",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "title": "Daily Toolbox Talk: Edge Barricading & Fall Arrest Above Floor 3",
+      "category": "Toolbox Talk",
+      "summary": "All workers operating within 2m of open slab edges on Floors 3–7 must hook double-lanyard safety harnesses to designated lifelines.",
+      "requiredPpe": [
+        "ISI Safety Helmet",
+        "High-Vis Reflective Vest",
+        "Steel-Toe Safety Boots",
+        "Full-Body Harness (Edge Work)"
+      ],
+      "acknowledged": false,
+      "publishedAt": "2026-11-18T06:30:00.000Z"
+    },
+    {
+      "id": "saf-2",
+      "siteId": "site-hyd-tower-a",
+      "siteName": "Tower A",
+      "title": "Mandatory PPE & Live Panel LOTO Rule",
+      "category": "Safety Instruction",
+      "summary": "No electrical panel covers may be opened without locking out upstream MCB/MCCB and attaching a personal Lock-Out Tag.",
+      "requiredPpe": [
+        "1000V Insulated Gloves",
+        "Safety Goggles",
+        "Dielectric Boots"
+      ],
+      "acknowledged": true,
+      "acknowledgedAt": "2026-11-17T08:10:00.000Z",
+      "publishedAt": "2026-11-10T07:00:00.000Z"
+    },
+    {
+      "id": "saf-3",
+      "siteId": "site-blr-block-b",
+      "siteName": "Block B",
+      "title": "Wet Cutting Dust & Eye Protection Rule",
+      "category": "Required PPE",
+      "summary": "Use water-fed tile cutters or wear N95 dust masks and wrap-around safety glasses inside enclosed apartment rooms.",
+      "requiredPpe": [
+        "Safety Helmet",
+        "Safety Goggles",
+        "N95 Dust Mask",
+        "Safety Shoes"
+      ],
+      "acknowledged": false,
+      "publishedAt": "2026-11-17T07:15:00.000Z"
+    }
+  ],
+  "safetyIncidents": [],
+  "supportTickets": [
+    {
+      "id": "tkt-1",
+      "ticketNumber": "HLP-2026-119",
+      "employeeId": "emp-rahul-1001",
+      "category": "Attendance Correction Request",
+      "description": "Overtime 2 hours on 12 Nov evening for emergency generator switchover needs supervisor sync.",
+      "attachmentNames": [],
+      "submittedAt": "2026-11-13T10:00:00.000Z",
+      "status": "Resolved",
+      "assignedDepartment": "Site HR & Payroll",
+      "resolutionRemarks": "Verified with Vikram Reddy and credited 2 hrs OT to Nov cycle.",
+      "idempotencyKey": "seed-tkt-1"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "not-1",
+      "employeeId": "emp-rahul-1001",
+      "title": "Work Progress Reviewed",
+      "message": "Vikram Reddy reviewed WRK-1042 (Floor 4 Conduit). 60m approved; continue remaining 45m today.",
+      "category": "Work",
+      "timestamp": "2026-11-17T18:10:00.000Z",
+      "read": false,
+      "projectSite": "Hyderabad Commercial Tower · Tower A",
+      "targetRoute": "/work"
+    },
+    {
+      "id": "not-2",
+      "employeeId": "emp-rahul-1001",
+      "title": "Material Receipt Confirmed — EXP-2026-809",
+      "message": "Storekeeper Kiran confirmed receipt of consumables. Finance reimbursement (₹1,770) is in queue.",
+      "category": "Purchase",
+      "timestamp": "2026-11-17T15:02:00.000Z",
+      "read": false,
+      "projectSite": "Hyderabad Commercial Tower · Tower A",
+      "targetRoute": "/purchases"
+    },
+    {
+      "id": "not-3",
+      "employeeId": "emp-rahul-1001",
+      "title": "October 2026 Salary Credited",
+      "message": "Net salary ₹25,100 credited via NEFT (Ref: NEFT-HDFC-99482011). Payslip ready.",
+      "category": "Salary",
+      "timestamp": "2026-11-01T11:30:00.000Z",
+      "read": true,
+      "projectSite": "BuildFlow Payroll",
+      "targetRoute": "/salary"
+    },
+    {
+      "id": "not-4",
+      "employeeId": "emp-ramesh-2001",
+      "title": "Brickwork Target Updated",
+      "message": "85 sq ft brickwork approved by Prakash Rao. Continue north wall WRK-2011 today.",
+      "category": "Work",
+      "timestamp": "2026-11-17T17:15:00.000Z",
+      "read": false,
+      "projectSite": "Hyderabad Commercial Tower · Tower A",
+      "targetRoute": "/work"
+    },
+    {
+      "id": "not-5",
+      "employeeId": "emp-suresh-2002",
+      "title": "Unresolved Attendance Session",
+      "message": "Yesterday check-out was not recorded on Tower A. Please submit checkout recovery before starting today.",
+      "category": "Attendance",
+      "timestamp": "2026-11-18T06:00:00.000Z",
+      "read": false,
+      "projectSite": "Hyderabad Commercial Tower · Tower A",
+      "targetRoute": "/attendance"
+    },
+    {
+      "id": "not-6",
+      "employeeId": "emp-mahesh-2003",
+      "title": "220 sq ft Tile Work Approved",
+      "message": "Anand Gowda approved Flat 304 living room tiling (₹9,900 earned at ₹45/sq ft).",
+      "category": "Work",
+      "timestamp": "2026-11-16T18:20:00.000Z",
+      "read": false,
+      "projectSite": "Bengaluru Residential Complex · Block B",
+      "targetRoute": "/work"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log-dfcfb33f",
+      "employeeId": "emp-rahul-1001",
+      "action": "LOGIN",
+      "entityType": "session",
+      "entityId": "885868d2",
+      "details": "Worker signed in",
+      "timestamp": "2026-11-18T10:41:43.434Z"
+    }
+  ],
+  "idempotencyKeys": {}
+}

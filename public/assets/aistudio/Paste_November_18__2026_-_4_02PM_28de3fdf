@@ -1,0 +1,1373 @@
+# BUILDFLOW — EMPLOYEE / LABOUR MOBILE APPLICATION
+## Complete UI/UX, Functional Workflows and Development Prompt
+
+Build a premium, mobile-first **Employee and Labour Application** for BuildFlow, a multi-tenant Construction Workforce Management and Project Operations SaaS platform.
+
+Build this application experience completely from scratch.
+
+Do not reuse the Company Admin, Project Manager, Site Manager, Site Engineer or Supervisor dashboards.
+
+This is an employee-facing mobile application used by construction workers, skilled labourers, daily-wage workers, supervisors and company employees.
+
+The application must be exceptionally easy to use for people working in real construction environments.
+
+Prioritize:
+- Simple navigation.
+- Large touch-friendly buttons.
+- Clear language.
+- Fast attendance.
+- Live selfie capture.
+- GPS-based attendance verification.
+- Work assignments.
+- Salary and wage visibility.
+- Leave and advance requests.
+- Material purchase submissions.
+- Notifications.
+- Mobile responsiveness.
+- Offline support.
+
+The primary experience should be designed for mobile devices, with a responsive web experience for desktop and tablet.
+
+---
+
+# 1. EMPLOYEE TYPES AND ACCESS
+
+BuildFlow must support different employee and labour categories.
+
+## Employee Categories
+
+1. Permanent Employees
+2. Contract Employees
+3. Daily-Wage Labourers
+4. Skilled Labourers
+5. Unskilled Labourers
+6. Hourly Workers
+7. Weekly-Wage Workers
+8. Piece-Rate Workers
+9. Temporary Workers
+10. Project-Based Workers
+11. Supervisors and Foremen
+
+The employee experience should adapt to the worker's employment type and permissions.
+
+For example:
+
+A monthly salaried employee should see monthly salary, payslips and leave balances.
+
+A daily-wage labourer should see:
+- Daily wage rate.
+- Approved working days.
+- Attendance.
+- Overtime, where applicable.
+- Wage calculation.
+- Payment history.
+
+A piece-rate worker should see:
+- Assigned work.
+- Accepted quantities.
+- Applicable rates.
+- Calculated earnings.
+- Approval status.
+
+Do not display irrelevant salary or leave modules to employment types that do not use them.
+
+## Access Rules
+
+An employee can only access:
+- Their own profile.
+- Their own attendance.
+- Their own location history.
+- Their assigned projects and sites.
+- Their own work assignments.
+- Their own salary and payslips.
+- Their own leave and advance requests.
+- Their own purchase submissions.
+- Their own notifications and documents.
+
+An employee must never be able to access another worker's private information by changing a URL or record ID.
+
+---
+
+# 2. DESIGN DIRECTION
+
+Create a modern, friendly and premium mobile application.
+
+The interface should feel simple and trustworthy, not like a complicated enterprise ERP.
+
+Design principles:
+- Mobile-first.
+- One-handed usability.
+- Large primary actions.
+- Minimal typing.
+- Clear labels and icons.
+- Easy-to-understand status indicators.
+- Fast screen loading.
+- Simple forms.
+- Large readable typography.
+- Accessible contrast.
+- Clear confirmation messages.
+
+Color palette:
+
+- Primary Navy: #101F35
+- Primary Blue: #2563EB
+- Light Blue: #EAF2FF
+- Construction Orange: #F59E0B
+- Background: #F5F7FA
+- White: #FFFFFF
+- Main Text: #172B4D
+- Secondary Text: #64748B
+- Success: #16A34A
+- Warning: #F59E0B
+- Danger: #DC2626
+- Border: #E2E8F0
+
+Use Inter typography and Lucide icons.
+
+Technology:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- Lucide React
+- Framer Motion
+- React Router
+- TanStack Query
+- React Hook Form
+- Zod
+
+Use Capacitor-compatible architecture so the same React application can later be packaged for Android and iOS.
+
+Do not assume a normal browser automatically has all native mobile capabilities.
+
+---
+
+# 3. MOBILE APPLICATION STRUCTURE
+
+Create a dedicated Employee / Labour application shell.
+
+## Mobile Header
+
+Display:
+- BuildFlow logo.
+- Employee profile avatar.
+- Current site or project.
+- Notification icon.
+- Online/offline synchronization status.
+
+## Bottom Navigation
+
+Use five primary navigation items:
+
+1. Home
+2. Attendance
+3. My Work
+4. Salary
+5. More
+
+The More section should contain:
+- Leave.
+- Advances.
+- Purchases.
+- Documents.
+- My Profile.
+- Notifications.
+- Help & Support.
+- Settings.
+
+Keep the bottom navigation visible on primary mobile pages.
+
+Do not overload the bottom navigation with too many items.
+
+## Desktop Experience
+
+For desktop and tablet:
+- Use a compact sidebar.
+- Show the employee profile.
+- Use a responsive content area.
+- Keep the same navigation structure.
+- Preserve all mobile functionality.
+
+---
+
+# 4. EMPLOYEE HOME SCREEN
+
+The home screen should immediately show the employee what they need to do today.
+
+## Welcome Section
+
+Display:
+
+"Good Morning, [Employee Name]"
+
+Below:
+
+"Your workday starts here."
+
+Show:
+- Employee ID.
+- Designation.
+- Employment type.
+- Assigned project.
+- Assigned site.
+- Reporting supervisor.
+- Today's date.
+
+## Attendance Status Card
+
+Create a large, visually prominent attendance card.
+
+Before check-in:
+
+<badge color="warning">Not Checked In</badge>
+
+Display:
+- Today's shift.
+- Assigned site.
+- Scheduled start time.
+- Site location.
+- Check-in availability.
+
+Primary button:
+
+**CHECK IN**
+
+After successful check-in:
+
+<badge color="success">Checked In</badge>
+
+Display:
+- Check-in time.
+- Captured selfie thumbnail.
+- Location verification status.
+- Active work session duration.
+- Current site.
+- Last successful location update.
+
+Primary button:
+
+**CHECK OUT**
+
+The button must change according to the current attendance state.
+
+Do not allow duplicate active check-in sessions.
+
+If the employee has an unresolved previous attendance session, show a clear recovery process instead of silently creating another session.
+
+## Today's Work Summary
+
+Display:
+- Assigned tasks.
+- Completed tasks.
+- Pending tasks.
+- Current supervisor.
+- Project/site information.
+
+## Quick Actions
+
+Create large action cards:
+
+- Check In / Check Out.
+- View Work.
+- Request Leave.
+- View Salary.
+- Request Advance.
+- Submit Purchase.
+- Report Issue.
+
+## Notifications Preview
+
+Show the latest notifications:
+- New work assignment.
+- Attendance approved.
+- Leave request updated.
+- Salary credited.
+- Purchase request approved.
+- Supervisor message.
+
+---
+
+# 5. SELFIE-BASED ATTENDANCE MODULE
+
+This is a core feature.
+
+Build a professional mobile attendance experience.
+
+Employees must capture a fresh selfie through the device camera during check-in and check-out.
+
+Do not allow gallery-uploaded images to substitute for the required live selfie.
+
+## Check-In Workflow
+
+Step 1: Open Attendance.
+
+Step 2: Select the assigned site if multiple sites are authorized.
+
+Step 3: Request camera permission.
+
+Step 4: Open the front camera.
+
+Step 5: Display a face-position guide.
+
+Step 6: Capture a fresh selfie.
+
+Step 7: Request location permission.
+
+Step 8: Retrieve available GPS coordinates.
+
+Step 9: Verify the employee is within the assigned site's configured geofence, where geofencing is enabled.
+
+Step 10: Display attendance details.
+
+Step 11: Submit check-in.
+
+Step 12: Wait for server confirmation.
+
+On successful submission show:
+
+"Check-in Successful"
+
+Display:
+- Employee name.
+- Check-in time.
+- Site name.
+- Selfie preview.
+- Location verification result.
+- Attendance reference ID.
+
+Do not display successful check-in until the backend confirms that the session has been recorded.
+
+## Check-In Failure Cases
+
+Handle:
+- Camera permission denied.
+- Location permission denied.
+- GPS unavailable.
+- Weak GPS accuracy.
+- Employee outside permitted geofence.
+- Network unavailable.
+- Duplicate check-in.
+- Server error.
+- Invalid device timestamp.
+- Missing assigned site.
+
+Provide clear recovery instructions.
+
+If geofence verification fails, allow an attendance exception request if the company permits it. Do not silently bypass the geofence.
+
+## Check-Out Workflow
+
+Use a similar fresh selfie capture process.
+
+Record:
+- Check-in time.
+- Check-out time.
+- Total session duration.
+- Break duration where configured.
+- Attendance evidence.
+- Location verification.
+- Work session reference.
+
+The backend should calculate payable attendance duration according to the company's shift and attendance policy.
+
+Do not automatically treat every minute between check-in and check-out as payable working time.
+
+---
+
+# 6. LIVE GPS LOCATION TRACKING
+
+Implement controlled GPS tracking during active attendance sessions.
+
+This feature is important for construction workforce coordination and site attendance monitoring.
+
+## Tracking Rules
+
+1. Location tracking starts only after an authorized active check-in.
+2. Tracking continues during the authorized work session.
+3. Target location update interval is every five minutes.
+4. Tracking stops after successful check-out.
+5. Tracking must not continue outside the authorized work session.
+6. Employees must be informed that tracking is active.
+7. Provide a visible tracking indicator.
+8. Show the last successful update time.
+9. Record location accuracy.
+10. Support offline location queues where technically possible.
+11. Synchronize queued records securely when connectivity returns.
+12. Mark delayed or stale location updates clearly.
+
+## Tracking Screen
+
+Display:
+- Active tracking status.
+- Assigned site.
+- Current location, where available.
+- Last update time.
+- GPS accuracy.
+- Work session duration.
+- Site geofence status.
+
+Use an interactive map when location permission is available.
+
+Clearly label the current location and assigned site.
+
+If location permission is unavailable, show a useful status message instead of fake coordinates.
+
+## Privacy and Platform Limitations
+
+Tracking must be transparent and limited to authorized work sessions.
+
+Do not secretly track employees outside working hours.
+
+Explain why location access is required.
+
+Support Android background location permissions where approved.
+
+On iOS and Android, respect operating-system background execution limitations. Do not promise uninterrupted five-minute background updates in every situation.
+
+Use best-effort native background tracking, offline queues, visible tracking state and last-update indicators.
+
+Provide an appropriate attendance exception workflow when location tracking fails.
+
+Apply configurable data retention and access permissions.
+
+Only authorized supervisors and managers should view employee location information for legitimate operational purposes.
+
+---
+
+# 7. MY WORK MODULE
+
+Create a dedicated My Work page.
+
+Employees should be able to see what work has been assigned to them.
+
+## Work Assignment Cards
+
+Each assignment should show:
+- Task ID.
+- Task title.
+- Project.
+- Site.
+- Location or floor.
+- Assigned supervisor.
+- Work description.
+- Priority.
+- Start date.
+- Due date.
+- Expected quantity, where applicable.
+- Unit of measurement.
+- Current status.
+
+Statuses:
+- Assigned.
+- Acknowledged.
+- In Progress.
+- Submitted for Review.
+- Completed.
+- Rework Required.
+- On Hold.
+
+## Work Details
+
+When an employee opens a task, show:
+
+- Task description.
+- Work instructions.
+- Assigned location.
+- Supervisor details.
+- Reference photographs.
+- Drawings or documents authorized for the worker.
+- Safety instructions.
+- Required equipment.
+- Expected output.
+- Due date.
+
+## Task Actions
+
+Provide:
+- Accept Assignment.
+- Start Work.
+- Update Progress.
+- Submit Work.
+- Report Blocker.
+- Request Clarification.
+
+For measurable work, allow workers to enter completed quantities if authorized.
+
+Example:
+- Work: Brickwork.
+- Expected quantity: 200 sq ft.
+- Submitted quantity: 85 sq ft.
+- Unit: sq ft.
+
+Allow photo evidence.
+
+Work completion must be verified by the authorized Supervisor, Site Engineer or Site Manager according to the task type.
+
+Employees must not be able to mark their own submitted work as officially approved.
+
+## Work History
+
+Display:
+- Completed assignments.
+- Pending review.
+- Rework.
+- Approved work.
+- Historical work output.
+
+---
+
+# 8. SALARY AND WAGE MODULE
+
+Create a dedicated salary and wage workspace.
+
+This module must adapt according to employment type.
+
+## A. Monthly Salaried Employees
+
+Display:
+- Monthly gross salary.
+- Allowances.
+- Approved overtime.
+- Deductions.
+- Net salary.
+- Payment status.
+- Next expected payday, if configured.
+- Salary history.
+
+## B. Daily-Wage Labourers
+
+Display:
+- Daily wage rate.
+- Approved working days.
+- Half-days, where configured.
+- Approved overtime.
+- Other approved earnings.
+- Authorized deductions.
+- Gross payable.
+- Net payable.
+- Payment status.
+
+Example:
+
+Daily wage: ₹700
+
+Approved working days: 24
+
+Gross wage: ₹16,800
+
+Other approved earnings: ₹500
+
+Authorized deductions: ₹300
+
+Net payable: ₹17,000
+
+Clearly label the example as sample data.
+
+## C. Hourly Workers
+
+Display:
+- Hourly rate.
+- Approved working hours.
+- Approved overtime hours.
+- Gross earnings.
+- Authorized deductions.
+- Net payable.
+
+## D. Piece-Rate Workers
+
+Display:
+- Work type.
+- Approved quantity.
+- Rate per unit.
+- Gross earnings.
+- Adjustments.
+- Net payable.
+
+## E. Salary History
+
+Create a table or mobile card list:
+
+- Payroll period.
+- Earnings.
+- Deductions.
+- Net payable.
+- Payment status.
+- Payment date.
+
+## F. Payslips
+
+Allow employees to:
+- View payslip.
+- Download PDF.
+- View earnings breakdown.
+- View deductions breakdown.
+- View payment reference where available.
+
+A payslip should contain:
+- Company name.
+- Employee details.
+- Employee ID.
+- Payroll period.
+- Attendance days.
+- Earnings.
+- Allowances.
+- Overtime.
+- Deductions.
+- Statutory deductions where applicable.
+- Net pay.
+- Payment status.
+
+Payslips must only be visible to the employee concerned and authorized company roles.
+
+## G. Payment History
+
+Display:
+- Payment date.
+- Amount.
+- Payment method.
+- Transaction reference.
+- Status.
+
+Payment statuses:
+- Processing.
+- Paid.
+- Failed.
+- Reversed.
+- On Hold.
+
+Never show a payment as Paid until the payment provider or authorized finance workflow confirms successful disbursement.
+
+---
+
+# 9. LEAVE MANAGEMENT
+
+Create a simple leave management page.
+
+Employees should be able to request leave from their mobile phones.
+
+## Leave Overview
+
+Display:
+- Available leave balance.
+- Used leave.
+- Pending requests.
+- Approved requests.
+- Leave history.
+
+Only show leave categories configured for that employee's employment type.
+
+Example categories:
+- Casual Leave.
+- Sick Leave.
+- Earned Leave.
+- Unpaid Leave.
+- Other company-configured leave.
+
+## Leave Request Form
+
+Fields:
+- Leave type.
+- Start date.
+- End date.
+- Full day or half day.
+- Reason.
+- Supporting document, where required.
+- Contact details during leave, where required.
+
+Automatically calculate requested working days according to configured company calendar and holidays.
+
+## Leave Request Workflow
+
+1. Employee submits request.
+2. Supervisor receives notification.
+3. Site Manager or HR reviews according to company policy.
+4. Employee receives the decision.
+5. Approved leave updates the employee's leave records.
+
+Statuses:
+- Draft.
+- Submitted.
+- Under Review.
+- Approved.
+- Rejected.
+- Cancelled.
+
+Show approval history and rejection reason.
+
+Do not automatically approve leave unless the company has explicitly configured that workflow.
+
+---
+
+# 10. ADVANCE AND LOAN REQUESTS
+
+Create a dedicated advance request page.
+
+Employees and labourers should be able to request salary advances or authorized loans.
+
+## Advance Request Form
+
+Fields:
+- Request type.
+- Requested amount.
+- Reason.
+- Preferred repayment period.
+- Supporting document, where required.
+
+Display:
+- Current outstanding advance.
+- Previously approved advances.
+- Repayment schedule.
+- Amount already repaid.
+- Remaining balance.
+- Pending request.
+
+## Workflow
+
+1. Employee submits request.
+2. Supervisor reviews if required.
+3. HR or Finance reviews.
+4. Authorized approver approves or rejects.
+5. Finance processes disbursement.
+6. Repayment is recorded against payroll or wages according to policy.
+
+Statuses:
+- Submitted.
+- Under Review.
+- Approved.
+- Rejected.
+- Disbursement Pending.
+- Disbursed.
+- Partially Repaid.
+- Fully Repaid.
+
+Employees must never be charged an unapproved deduction.
+
+Display the applicable repayment schedule and deduction history clearly.
+
+---
+
+# 11. PURCHASE AND MATERIAL REQUEST MODULE
+
+This is a very important BuildFlow workflow.
+
+Employees, labourers and supervisors may need to purchase materials or consumables for construction work.
+
+Create a dedicated purchase submission page.
+
+Support two different workflows:
+
+A. Purchase Request: Asking the company to purchase required materials.
+
+B. Purchase Expense Submission: Reporting materials already purchased by an authorized employee using personal or company funds.
+
+Do not combine these into one ambiguous process.
+
+## A. Purchase Request
+
+Fields:
+- Project.
+- Site.
+- Material category.
+- Material name.
+- Required quantity.
+- Unit.
+- Estimated price.
+- Priority.
+- Required delivery date.
+- Reason.
+- Work/task reference.
+- Supporting photograph.
+
+Workflow:
+Employee → Supervisor → Site Manager → Procurement → Authorized approval.
+
+The actual workflow should be configurable.
+
+## B. Purchase Expense Submission
+
+When an employee has already purchased authorized materials, allow them to submit the expense.
+
+Fields:
+
+**Purchase Information**
+- Purchase reference.
+- Supplier/shop name.
+- Supplier contact, optional.
+- Purchase date.
+- Project.
+- Site.
+- Material category.
+- Material name.
+- Quantity.
+- Unit.
+- Unit price.
+- Total amount.
+- Payment method.
+- Paid by.
+- Reason for purchase.
+
+**Bill Upload**
+- Bill photograph.
+- Invoice PDF.
+- GST invoice details, where available.
+- Supplier GSTIN, where available.
+- Invoice number.
+
+**Material Evidence**
+- Multiple material photographs.
+- Delivery photographs.
+- Packaging photographs.
+- Material label photographs.
+
+**Location and Time**
+- GPS location, where permission is granted.
+- Capture timestamp.
+- Submission timestamp.
+
+**Additional Details**
+- Remarks.
+- Work/task reference.
+
+## C. Purchase Calculation
+
+Automatically calculate:
+
+Quantity × Unit Price = Total Amount.
+
+Allow additional line items.
+
+Display:
+- Subtotal.
+- Tax, where applicable.
+- Total purchase amount.
+
+Use decimal-safe calculations.
+
+## D. Purchase Status
+
+Statuses:
+- Draft.
+- Submitted.
+- Under Supervisor Review.
+- Under Site Manager Review.
+- Under Procurement Review.
+- Under Finance Review.
+- Approved.
+- Rejected.
+- Reimbursement Pending.
+- Reimbursed.
+- Material Receipt Pending.
+- Material Received.
+
+Employees should be able to track the status and see rejection reasons.
+
+## E. Purchase Receipt Separation
+
+IMPORTANT:
+
+Uploading a bill does not mean the material has been received.
+
+Submitting a purchase expense does not mean it has been reimbursed.
+
+A material receipt must be separately verified by an authorized Site Engineer, Storekeeper or Site Manager.
+
+Inventory should only increase after authorized material receipt confirmation.
+
+Do not show the purchase as reimbursed until the Finance/payment workflow confirms it.
+
+---
+
+# 12. DOCUMENTS MODULE
+
+Create a My Documents page.
+
+Display documents assigned to the employee.
+
+Categories:
+- Employee ID.
+- Employment letter.
+- Appointment letter.
+- Identity documents.
+- Training certificates.
+- Safety certificates.
+- Salary slips.
+- Attendance records.
+- Other authorized documents.
+
+Allow:
+- View.
+- Download where authorized.
+- Upload requested documents.
+- Track verification status.
+
+Document statuses:
+- Requested.
+- Uploaded.
+- Under Review.
+- Verified.
+- Rejected.
+- Expired.
+
+Store documents privately and protect sensitive personal information.
+
+Do not expose documents through public permanent links.
+
+---
+
+# 13. SAFETY AND SITE INFORMATION
+
+Create a simple safety workspace.
+
+Display:
+- Assigned safety instructions.
+- Site rules.
+- Required PPE.
+- Safety training.
+- Emergency contacts.
+- Toolbox talk records.
+- Safety notices.
+
+Allow employees to:
+- Acknowledge safety instructions.
+- View training material.
+- Report unsafe conditions.
+- Report incidents.
+- Upload photographs.
+
+Incident reporting fields:
+- Incident type.
+- Site.
+- Location.
+- Date/time.
+- Description.
+- Supporting photographs.
+- People involved, where appropriate.
+- Immediate action taken.
+
+Critical safety incidents should immediately notify authorized site management.
+
+Do not create complex safety administration for employees; keep the interface simple.
+
+---
+
+# 14. COMPLAINTS AND HELP DESK
+
+Create a simple employee help and support module.
+
+Employees should be able to raise:
+- Attendance correction request.
+- Salary discrepancy.
+- Missing payslip.
+- Leave issue.
+- Work assignment issue.
+- Purchase reimbursement issue.
+- Safety concern.
+- Other workplace concern.
+
+Each request should contain:
+- Ticket number.
+- Category.
+- Description.
+- Supporting attachments.
+- Submitted date.
+- Current status.
+- Assigned department.
+- Resolution remarks.
+
+Statuses:
+- Submitted.
+- Assigned.
+- Under Review.
+- Waiting for Employee.
+- Resolved.
+- Closed.
+
+Allow employees to view the request history and receive updates.
+
+---
+
+# 15. NOTIFICATION CENTRE
+
+Create a mobile-friendly notification centre.
+
+Examples:
+- Check-in successful.
+- Check-out successful.
+- Attendance correction requested.
+- Attendance approved.
+- New work assigned.
+- Task due today.
+- Work accepted.
+- Work returned for correction.
+- Leave approved.
+- Leave rejected.
+- Advance approved.
+- Advance disbursed.
+- Salary processed.
+- Salary credited.
+- Payslip available.
+- Purchase request approved.
+- Purchase rejected.
+- Reimbursement processed.
+- New site safety notice.
+- New supervisor message.
+
+Include:
+- Read/unread.
+- Notification category.
+- Timestamp.
+- Related project/site.
+- Open related screen.
+
+---
+
+# 16. MY PROFILE
+
+Create a clean employee profile page.
+
+Fields:
+- Full name.
+- Employee ID.
+- Profile photograph.
+- Phone number.
+- Email.
+- Designation.
+- Employment type.
+- Department.
+- Joining date.
+- Assigned project.
+- Assigned site.
+- Reporting supervisor.
+- Emergency contact.
+
+Allow employees to update only permitted personal information.
+
+Changes to sensitive information must go through verification or HR approval.
+
+Do not allow employees to change their own:
+- Salary structure.
+- Employment status.
+- Company role.
+- Attendance records.
+- Approved project assignments.
+
+---
+
+# 17. MOBILE OFFLINE SUPPORT
+
+Construction sites may have weak or no internet connectivity.
+
+Implement a resilient offline experience.
+
+Allow local draft capture for:
+- Attendance exception requests.
+- Work progress updates.
+- Purchase expense drafts.
+- Inspection-related employee evidence where authorized.
+- Issue reports.
+- Document upload queues.
+
+Display synchronization status:
+
+- Saved on Device.
+- Waiting to Sync.
+- Uploading.
+- Synced Successfully.
+- Sync Failed.
+
+IMPORTANT:
+
+Do not claim that an offline attendance check-in has been officially approved or recorded.
+
+If a check-in is captured offline, label it as a pending attendance submission requiring backend validation.
+
+Use secure local storage for sensitive information.
+
+Encrypt locally stored sensitive data where supported.
+
+Retry failed uploads safely.
+
+Use idempotency keys to prevent duplicate attendance sessions, purchase submissions and work updates.
+
+---
+
+# 18. SECURITY AND PRIVACY
+
+Security is essential because the application handles employee photographs, location information, identity documents, attendance and salary records.
+
+Implement:
+
+1. Employee authentication.
+2. Secure session management.
+3. Employee-specific authorization.
+4. Organization and tenant isolation.
+5. Project/site-level data access.
+6. Private file storage.
+7. Secure signed document links.
+8. Server-side validation.
+9. Audit logs for sensitive changes.
+10. Rate limiting for sensitive operations.
+11. Secure image upload validation.
+12. GPS access only for authorized work sessions.
+13. Transparent tracking indicators.
+14. Configurable location retention.
+15. No public payslip URLs.
+16. No unrestricted access to employee identity documents.
+17. No exposure of bank account credentials.
+18. Protection against record-ID manipulation.
+
+Do not trust the frontend alone for permissions or salary calculations.
+
+Use Supabase Auth and Row Level Security.
+
+Sensitive attendance, payroll and purchase operations must be validated by secure backend functions.
+
+---
+
+# 19. DATA ARCHITECTURE
+
+Prepare the application around these entities:
+
+- organizations
+- employees
+- employee_profiles
+- employment_types
+- employee_assignments
+- project_assignments
+- site_assignments
+- employee_shifts
+- attendance_sessions
+- attendance_photos
+- attendance_exceptions
+- employee_location_logs
+- tracking_sessions
+- work_assignments
+- work_progress_updates
+- work_evidence
+- salary_profiles
+- payroll_records
+- payslips
+- payment_transactions
+- leave_types
+- leave_balances
+- leave_requests
+- employee_advances
+- advance_repayments
+- purchase_requests
+- purchase_request_items
+- employee_purchase_expenses
+- purchase_expense_items
+- purchase_documents
+- material_photos
+- material_receipts
+- employee_documents
+- safety_training_records
+- safety_incidents
+- support_tickets
+- notifications
+- employee_activity_logs
+
+Preserve historical employment and project assignments.
+
+Attendance and payroll records must reference the applicable assignment and pay rules for the relevant period.
+
+Use:
+- Supabase PostgreSQL.
+- Supabase Auth.
+- Supabase Row Level Security.
+- Supabase Realtime.
+- Supabase Edge Functions.
+- Cloudflare R2 for private images and documents.
+
+---
+
+# 20. FUNCTIONALITY REQUIREMENTS
+
+This must be a real interactive employee application.
+
+Implement:
+
+- Mobile bottom navigation.
+- Employee home screen.
+- Attendance state management.
+- Camera capture interface.
+- GPS permission handling.
+- Geofence status display.
+- Check-in and check-out workflows.
+- Active work session.
+- Location tracking state.
+- Work assignment list.
+- Work progress submission.
+- Salary breakdown.
+- Payslip viewing.
+- Leave request form.
+- Advance request form.
+- Purchase request form.
+- Purchase expense submission.
+- Multiple photo attachments.
+- Notification centre.
+- Document repository.
+- Safety reporting.
+- Help desk.
+- Search and filters.
+- Form validation.
+- Confirmation dialogs.
+- Offline draft handling.
+- Synchronization indicators.
+
+Use realistic demo data initially.
+
+Clearly mark mock data as sample data.
+
+Do not fake successful camera verification, GPS verification, payment or backend persistence.
+
+---
+
+# 21. SAMPLE EMPLOYEE DATA
+
+Create several realistic Indian construction worker profiles.
+
+Example 1: Monthly Salaried Employee
+
+Name: Rahul Kumar
+
+Employee ID: BF-EMP-1001
+
+Designation: Site Electrician
+
+Employment Type: Monthly Salaried
+
+Project: Hyderabad Commercial Tower
+
+Site: Tower A
+
+Salary: ₹24,000 per month
+
+Example 2: Daily-Wage Labourer
+
+Name: Ramesh
+
+Employee ID: BF-LAB-2001
+
+Designation: Mason
+
+Employment Type: Daily Wage
+
+Project: Hyderabad Commercial Tower
+
+Site: Tower A
+
+Daily Wage: ₹800
+
+Example 3: Skilled Labourer
+
+Name: Suresh
+
+Employee ID: BF-LAB-2002
+
+Designation: Steel Fixer
+
+Employment Type: Daily Wage
+
+Project: Hyderabad Commercial Tower
+
+Site: Tower A
+
+Daily Wage: ₹900
+
+Example 4: Piece-Rate Worker
+
+Name: Mahesh
+
+Employee ID: BF-LAB-2003
+
+Designation: Tile Worker
+
+Employment Type: Piece Rate
+
+Project: Bengaluru Residential Complex
+
+Site: Block B
+
+Sample Rate: ₹45 per sq ft of approved work.
+
+These are illustrative sample records only.
+
+---
+
+# 22. DEVELOPMENT PHASES
+
+Build in the following sequence.
+
+Phase 1:
+- Employee application shell.
+- Mobile home screen.
+- Bottom navigation.
+- Employee profile.
+- Attendance UI.
+- Camera capture.
+- GPS permission and status.
+
+Phase 2:
+- Active location tracking.
+- Work assignments.
+- Work progress updates.
+- Work history.
+
+Phase 3:
+- Salary and wages.
+- Payslips.
+- Payment history.
+- Leave management.
+- Advance requests.
+
+Phase 4:
+- Purchase requests.
+- Purchase expense submission.
+- Bill uploads.
+- Material photographs.
+- Receipt status tracking.
+
+Phase 5:
+- Employee documents.
+- Safety.
+- Help desk.
+- Notifications.
+
+Phase 6:
+- Offline drafts.
+- Synchronization.
+- Security testing.
+- Android/iOS compatibility.
+- Responsive testing.
+
+Do not put everything in one enormous component.
+
+Create separate screens, components, services and reusable form elements.
+
+---
+
+# FINAL PRODUCT EXPECTATION
+
+The completed BuildFlow Employee / Labour application should be so simple that a construction worker can understand and use it without technical training.
+
+An employee should be able to answer:
+
+1. Where am I assigned to work today?
+2. How do I check in with my selfie?
+3. Is my attendance recorded?
+4. Is location tracking active?
+5. What work has been assigned to me?
+6. Has my work been approved?
+7. How much salary or wage have I earned?
+8. Has my payment been processed?
+9. How can I request leave?
+10. How can I request an advance?
+11. How do I submit a material purchase bill?
+12. Has my purchase reimbursement been approved?
+13. What documents and notifications do I have?
+
+The application must prioritize simplicity, trust, speed, privacy, field usability and mobile-first design.
+
+Build this as a complete employee-facing mobile application within BuildFlow.
